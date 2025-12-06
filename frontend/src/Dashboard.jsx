@@ -10,7 +10,7 @@ export default function Dashboard() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/dashboard", {
+      .get("https://node-auth-fullstack.onrender.com/dashboard", {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => setMsg(res.data.msg))

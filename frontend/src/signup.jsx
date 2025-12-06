@@ -9,7 +9,7 @@ export default function Signup() {
 
   const handleSignup = async () => {
     try {
-      await axios.post("http://localhost:5000/auth/signup", form);
+      await axios.post("https://node-auth-fullstack.onrender.com/auth/signup", form);
       setMsg("Signup successful!");
       navigate("/login");
     } catch (error) {
