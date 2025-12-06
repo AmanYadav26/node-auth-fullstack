@@ -17,11 +17,7 @@ router.post("/signup", async (req, res) => {
 
         const user = await User.create({ name, email, password: hashed });
 
-        // fetch("https://your-n8n-url/webhook/signup", {
-        //     method: "POST",
-        //     headers: { "Content-Type": "application/json" },
-        //     body: JSON.stringify({ name, email }),
-        // });
+       
 
         res.json({ msg: "Signup successful" });
     } catch (err) {
