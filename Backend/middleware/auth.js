@@ -4,10 +4,8 @@ module.exports = function (req, res, next) {
     let token = req.headers["authorization"];
 
     if (!token) return res.status(401).json({ msg: "Unauthorized" });
-
-    // If token starts with Bearer, remove it
     if (token.startsWith("Bearer ")) {
-        token = token.slice(7).trim();  // remove "Bearer "
+        token = token.slice(7).trim();  
     }
 
     try {
