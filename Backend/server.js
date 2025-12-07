@@ -18,6 +18,11 @@ mongoose
 
 app.use("/auth", authRoutes);
 
+app.get("/ping", (req, res) => {
+  res.send("pong");
+});
+
+
 // Protected route
 app.get("/dashboard", auth, (req, res) => {
     res.json({ msg: `Welcome User ${req.user}` });
